@@ -1,0 +1,22 @@
+version: "3.9"
+services:  
+  api-tipocambio-moneda:
+    build: .\api-tipocambio-moneda
+    container_name: "api-container"
+    ports:
+      - 8084:8084
+    networks:
+      - spring-network
+
+  tipocambio:
+    build: .\tipocambio
+    container_name: "angular-container"
+    ports:
+      - 4200:4200
+    depends_on:
+      - api-tipocambio-moneda
+    networks:
+      - spring-network
+
+networks:
+  spring-network:
