@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Lista de cambios</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>MONTO</th>
+                        <th>MONEDA ORIGEN</th>
+                        <th>MONEDA DESTINO</th>
+                        <th>TIPO CAMBIO</th>
+                        <th>MONTO TIPO CAMBIO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cambio of cambios" class="text-center">
+                        <td>{{cambio.id}}</td>
+                        <td>{{cambio.monto}}</td>
+                        <td>{{cambio.monedaOrigen}}</td>
+                        <td>{{cambio.monedaDestino}}</td>
+                        <td>{{cambio.tipoCambio}}</td>
+                        <td>{{cambio.montoTipoCambio}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
